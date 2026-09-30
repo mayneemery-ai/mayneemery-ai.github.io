@@ -1376,3 +1376,38 @@ body {
     max-width: 100%;
   }
 }
+
+
+/* Embedded Facebook branded reel */
+.reel-embed-card {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  max-width: 520px;
+  margin-top: 8px;
+}
+
+.facebook-reel-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.facebook-reel-embed iframe {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 700px) {
+  .reel-embed-card {
+    max-width: 100%;
+  }
+
+  .facebook-reel-embed {
+    aspect-ratio: 1 / 1.08;
+  }
+}
