@@ -880,3 +880,28 @@ img.media-natural {
     display: none;
   }
 }
+
+
+/* Brand identity reel previews */
+.brand-preview {
+  display: grid;
+  gap: 10px;
+}
+
+.brand-preview .media-frame {
+  display: grid;
+  justify-items: center;
+}
+
+.preview-link {
+  width: fit-content;
+  color: var(--burgundy);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.preview-link:hover {
+  opacity: .72;
+}
