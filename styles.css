@@ -1326,3 +1326,53 @@ body {
     font-size: clamp(46px, 14vw, 62px);
   }
 }
+
+
+/* Stack portfolio work vertically instead of side-by-side */
+.showcase-grid,
+.accomplishments-grid {
+  grid-template-columns: 1fr !important;
+  gap: 28px;
+}
+
+.showcase-card {
+  width: 100%;
+}
+
+.second-row {
+  margin-top: 28px;
+}
+
+.brand-visuals {
+  grid-template-columns: 1fr !important;
+}
+
+.brand-visuals .media-frame {
+  width: 100%;
+}
+
+.brand-visuals .media-landscape img,
+.brand-visuals .media-portrait img {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.reel-preview-card,
+.project-proof,
+.full-visual,
+.placeholder-links,
+.app-placeholders {
+  width: 100%;
+}
+
+@media (min-width: 1101px) {
+  .showcase-grid,
+  .accomplishments-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .showcase-card {
+    max-width: 100%;
+  }
+}
