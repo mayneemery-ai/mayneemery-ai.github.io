@@ -1176,3 +1176,153 @@ img.media-natural {
     padding-top: 80px;
   }
 }
+
+
+/* Typography and visual language aligned to the uploaded reference */
+body {
+  font-family: "Quicksand", Arial, sans-serif;
+  font-weight: 400;
+  color: #2f2f2f;
+  line-height: 1.8;
+}
+
+.hero h1,
+.canva-section h2,
+.aside-brand strong {
+  font-family: "Quicksand", Arial, sans-serif;
+}
+
+.hero h1 {
+  font-weight: 700;
+  letter-spacing: -.03em;
+}
+
+.hero-role {
+  font-weight: 500;
+  letter-spacing: .02em;
+}
+
+.hero-line,
+.section-heading p,
+.section-intro,
+.showcase-card p,
+.project-proof p,
+.experience-copy p {
+  font-weight: 400;
+}
+
+.canva-section h2 {
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.showcase-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.showcase-card h4 {
+  font-weight: 700;
+  letter-spacing: .05em;
+}
+
+.aside-brand strong {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+.aside-brand span,
+.aside-nav a,
+.contact-line,
+.aside-contact {
+  font-family: "Quicksand", Arial, sans-serif;
+}
+
+.aside-nav a {
+  font-weight: 500;
+  letter-spacing: .01em;
+}
+
+.skills-grid div {
+  font-weight: 500;
+}
+
+.company,
+.experience-copy strong,
+.site-links a,
+.preview-link,
+.project-proof strong {
+  font-weight: 600;
+}
+
+/* Cleaner reference-style surfaces */
+.portfolio-aside {
+  background: #f3f3f3;
+}
+
+.showcase-card,
+.skills-grid div,
+.company {
+  background: #f7f7f7;
+}
+
+.showcase-card {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.skills-grid,
+.experience-table,
+.showcase-card,
+.full-visual,
+.project-proof > img,
+.brand-visuals .media-landscape img,
+.brand-visuals .media-portrait img {
+  border-color: #dddddd;
+}
+
+.canva-section {
+  border-top-color: #e5e5e5;
+}
+
+.section-heading {
+  align-items: start;
+}
+
+.section-heading p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.hero {
+  align-items: center;
+}
+
+.hero-photo img {
+  border-radius: 0;
+}
+
+.image-placeholder,
+.placeholder-links a {
+  border-radius: 0;
+  background: #fafafa;
+}
+
+@media (max-width: 700px) {
+  body {
+    line-height: 1.7;
+  }
+
+  .canva-section h2 {
+    font-size: 30px;
+    letter-spacing: .06em;
+  }
+
+  .hero h1 {
+    font-size: clamp(46px, 14vw, 62px);
+  }
+}
