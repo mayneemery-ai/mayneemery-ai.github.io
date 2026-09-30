@@ -905,3 +905,97 @@ img.media-natural {
 .preview-link:hover {
   opacity: .72;
 }
+
+
+/* Brand identity section: two work samples + one reel preview */
+.brand-visuals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.brand-visuals .media-frame {
+  display: grid;
+  align-items: center;
+  min-width: 0;
+}
+
+.brand-visuals .media-landscape img,
+.brand-visuals .media-portrait img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.reel-preview-card {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.reel-preview-media {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.reel-preview-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(.72);
+}
+
+.play-button {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%,-50%);
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.94);
+  color: var(--burgundy);
+  font-size: 24px;
+  padding-left: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+.reel-preview-label {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  padding: 6px 9px;
+  background: rgba(255,255,255,.92);
+  color: var(--burgundy);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .11em;
+}
+
+@media (max-width: 700px) {
+  .brand-visuals {
+    grid-template-columns: 1fr;
+  }
+
+  .reel-preview-media img {
+    max-height: none;
+    object-fit: contain;
+    filter: brightness(.76);
+  }
+
+  .play-button {
+    width: 54px;
+    height: 54px;
+    font-size: 20px;
+  }
+}
