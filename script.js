@@ -1,4 +1,6 @@
-const targets = document.querySelectorAll('.work-card, .case-study, .capability-cards article, .timeline article');
+const targets = document.querySelectorAll(
+  '.showcase-card, .experience-row, .skills-grid'
+);
 
 targets.forEach((el) => el.classList.add('reveal'));
 
@@ -9,6 +11,6 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.08 });
 
 targets.forEach((el) => observer.observe(el));
