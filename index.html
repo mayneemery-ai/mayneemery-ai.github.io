@@ -11,15 +11,31 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top">EM</a>
-    <nav aria-label="Primary navigation">
+  <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <aside class="portfolio-aside" aria-label="Portfolio navigation">
+    <a class="aside-brand" href="#top">
+      <strong>Emery Mayne</strong>
+      <span>Marketing • Communications • Creative Strategy</span>
+    </a>
+
+    <nav class="aside-nav">
+      <a href="#top">Home</a>
+      <a href="#what-i-bring">What I Bring</a>
       <a href="#featured-work">Featured Work</a>
       <a href="#selected-accomplishments">Selected Accomplishments</a>
       <a href="#experience">Experience</a>
     </nav>
-  </header>
 
+    <div class="aside-contact">
+      <a href="mailto:mayneemery@gmail.com">mayneemery@gmail.com</a>
+      <a href="tel:+18504088292">(850) 408-8292</a>
+    </div>
+  </aside>
+
+  <div class="page-main">
   <main id="top">
     <section class="hero section-shell">
       <div class="hero-copy">
@@ -37,7 +53,7 @@
       </figure>
     </section>
 
-    <section class="section-shell canva-section what-i-bring">
+    <section id="what-i-bring" class="section-shell canva-section what-i-bring">
       <h2>WHAT I BRING</h2>
       <div class="skills-grid">
         <div>Marketing Strategy</div>
@@ -263,6 +279,7 @@
     </div>
   </footer>
 
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
