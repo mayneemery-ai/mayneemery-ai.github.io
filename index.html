@@ -82,13 +82,44 @@
           <p class="lead">Built and applied cohesive brand systems across logo design, signage, brochures, buyer and seller guides, websites, launch materials, and print and digital touchpoints.</p>
           <div class="brand-stack">
             <div class="brand-visuals">
-              <div class="media-frame media-landscape">
-                <img src="assets/brand-desktop.svg" alt="Constantino Group website displayed on a desktop monitor" />
-              </div>
-              <div class="media-frame media-portrait">
-                <img src="assets/brand-sign.svg" alt="Constantino Group Keller Williams property sign" />
+              <div class="media-frame media-natural">
+                <img
+                  id="brand-identity-showcase"
+                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                  alt="Constantino Group brand identity work across website design, marketing collateral, direct mail, business cards, and property signage"
+                  style="display:block;width:100%;max-width:800px;height:auto;margin:0 auto;border:1px solid var(--line);"
+                />
               </div>
             </div>
+
+            <script>
+              (() => {
+                const image = document.getElementById('brand-identity-showcase');
+                if (!image) return;
+                const parts = [
+                  'assets/brand-showcase-01.txt',
+                  'assets/brand-showcase-02.txt',
+                  'assets/brand-showcase-03.txt',
+                  'assets/brand-showcase-04.txt',
+                  'assets/brand-showcase-05.txt',
+                  'assets/brand-showcase-06.txt',
+                  'assets/brand-showcase-07.txt',
+                  'assets/brand-showcase-08.txt'
+                ];
+                Promise.all(parts.map((part) =>
+                  fetch(part).then((response) => {
+                    if (!response.ok) throw new Error('Unable to load brand showcase image');
+                    return response.text();
+                  })
+                ))
+                  .then((chunks) => {
+                    image.src = 'data:image/jpeg;base64,' + chunks.join('');
+                  })
+                  .catch(() => {
+                    image.alt = 'Constantino Group brand identity showcase';
+                  });
+              })();
+            </script>
 
             <div class="brand-publications">
               <div class="publication-card">
