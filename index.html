@@ -82,29 +82,53 @@
           <p class="lead">Built and applied cohesive brand systems across logo design, signage, brochures, buyer and seller guides, websites, launch materials, and print and digital touchpoints.</p>
           <div class="brand-stack">
             <div class="brand-visuals">
-              <div class="media-frame media-natural">
-                <img
-                  id="brand-identity-showcase"
-                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-                  alt="Constantino Group brand identity work across website design, marketing collateral, direct mail, business cards, and property signage"
-                  style="display:block;width:100%;max-width:800px;height:auto;margin:0 auto;border:1px solid var(--line);"
-                />
+              <div
+                class="brand-showcase-hd"
+                style="display:grid;grid-template-columns:1fr 1fr 1fr;width:100%;max-width:800px;aspect-ratio:800/274;margin:0 auto;overflow:hidden;border:1px solid var(--line);background:#111;"
+              >
+                <div style="min-width:0;overflow:hidden;">
+                  <img
+                    src="assets/brand-desktop.svg"
+                    alt="Constantino Group website displayed on a desktop monitor"
+                    style="display:block;width:100%;height:100%;object-fit:cover;object-position:center;"
+                  />
+                </div>
+                <div style="min-width:0;overflow:hidden;">
+                  <img
+                    id="brand-collateral-showcase"
+                    src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                    alt="Constantino Group marketing collateral, direct mail, business cards, and sold postcards"
+                    style="display:block;width:100%;height:100%;object-fit:cover;object-position:center;"
+                  />
+                </div>
+                <div style="min-width:0;overflow:hidden;">
+                  <img
+                    src="assets/brand-sign.svg"
+                    alt="Constantino Group property sign"
+                    style="display:block;width:100%;height:100%;object-fit:cover;object-position:center;"
+                  />
+                </div>
               </div>
             </div>
 
             <script>
               (() => {
-                const image = document.getElementById('brand-identity-showcase');
+                const image = document.getElementById('brand-collateral-showcase');
                 if (!image) return;
+                const base = 'https://raw.githubusercontent.com/mayneemery-ai/mayneemery-ai.github.io/edfd2826c40315aee1801a592019898412c7953e/assets/';
                 const parts = [
-                  'assets/brand-showcase-01a.txt',
-                  'assets/brand-showcase-01b.txt',
-                  'assets/brand-showcase-02.txt',
-                  'assets/brand-showcase-03.txt'
+                  'brand-showcase-01.txt',
+                  'brand-showcase-02.txt',
+                  'brand-showcase-03.txt',
+                  'brand-showcase-04.txt',
+                  'brand-showcase-05.txt',
+                  'brand-showcase-06.txt',
+                  'brand-showcase-07.txt',
+                  'brand-showcase-08.txt'
                 ];
                 Promise.all(parts.map((part) =>
-                  fetch(part).then((response) => {
-                    if (!response.ok) throw new Error('Unable to load brand showcase image');
+                  fetch(base + part).then((response) => {
+                    if (!response.ok) throw new Error('Unable to load brand collateral image');
                     return response.text();
                   })
                 ))
@@ -112,7 +136,7 @@
                     image.src = 'data:image/jpeg;base64,' + chunks.join('');
                   })
                   .catch(() => {
-                    image.alt = 'Constantino Group brand identity showcase';
+                    image.alt = 'Constantino Group marketing collateral showcase';
                   });
               })();
             </script>
