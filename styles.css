@@ -1467,3 +1467,42 @@ body {
     height: 420px;
   }
 }
+
+/* What I Bring: three focused areas of expertise */
+.what-i-bring .expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+.what-i-bring .expertise-card {
+  min-width: 0;
+  border: 1px solid var(--line);
+  padding: 25px 20px 27px;
+  background: transparent;
+}
+.what-i-bring .expertise-number {
+  display: block;
+  margin-bottom: 24px;
+  color: #742333;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+}
+.what-i-bring .expertise-card h3 {
+  color: #742333;
+  font-size: 21px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+.what-i-bring .expertise-card p {
+  margin: 0;
+  line-height: 1.65;
+  font-size: 14px;
+}
+@media (max-width: 750px) {
+  .what-i-bring .expertise-grid { grid-template-columns: 1fr; }
+  .what-i-bring .expertise-card { padding: 20px; }
+  .what-i-bring .expertise-number { margin-bottom: 12px; }
+}
